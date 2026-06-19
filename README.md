@@ -1,16 +1,10 @@
-\# Resume
-
-
+#Resume
 
 ФИО: Гефтер Тимур  
 
 Группа: БКНАД253
 
-
-
-\## how-to-build
-
-
+##how-to-build
 
 ```bash
 
@@ -20,15 +14,9 @@ docker run --rm -v $(pwd):/resume resume
 
 ```
 
-
-
 The generated pdf will be available as `resume.pdf`.
 
-
-
-\## GitHub Pages
-
-
+## GitHub Pages
 
 Resume link: https://geftertimur.github.io/cv/cv/resume.pdf
 
