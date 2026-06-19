@@ -1,0 +1,22 @@
+name: Build resume
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build --tag resume -f Dockerfile .
+
+      - name: Run Docker container
+        run: docker run --rm -v ${{ github.workspace }}:/resume resume
+
+      - name: Check PDF exists
+        run: test -f resume.pdf

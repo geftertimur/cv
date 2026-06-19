@@ -1,0 +1,170 @@
+\documentclass[
+    compact
+]{llresume}
+
+% Use the following commands to change the document's colors
+\definecolor{accentcolor}{HTML}{8D281E}
+\definecolor{fillcolor}{HTML}{E4EDDE}
+\definecolor{headingcolor}{HTML}{1C6336}
+
+% Define custom commands, if needed
+\renewcommand{\emph}[1]{{\bfseries\color{accentcolor}#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Personal information
+%
+% For contacts and other info, you can use \infoGeneric{<icon>}{<text>}[<link>]
+% to add a line of information, or one of the following shortcuts in the form
+% \info<Shortcut>{<text>}[<link>]:
+%
+% \infoEmail          \infoDate           \infoLinkedin       \infoBook
+% \infoPhone          \infoPlace          \infoGithub         \infoAuthor
+% \infoAddress        \infoLink           \infoInstagram      \infoTools
+% \infoBirthday       \infoHomepage       \infoFlickr
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% First name, last name, and optional pronouns
+\name{Timur}{Gefter}
+
+% Profile photo
+\photo{photo.png}
+
+% Contacts and other info
+\personalinfo{
+    \infoBirthday{22/08/2004}
+    \infoAddress{Moscow}
+    \infoEmail{gefter@timur1.ru}
+    \infoGithub{https://github.com/geftertimur}
+}
+
+% Tag line
+\tagline{
+    My name is Gefter Timur. I am a \emph{computer science enthusiast} mostly interested in DL, CV and robotics. My current ambition is to join the self-driving or robotics team.
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Main pane
+%
+% Each section of the main pane is enclosed within an environment of the form
+% \begin{mainsection}{<section title>} ... \end{mainsection}
+%
+% Available commands:
+%
+% \entryJob{<title>}[<descr>]{<location>}{<date>}
+% \entryPub{<title>}[<descr>]{<authors>}{<journal/conference>}{<DOI/link>}
+% \entrySkills[<title>]{<list of skills>}
+% \entryTags[<title>]{<list of tags>}
+% \entryGeneric{<title>}[<descr>][<info>][<info>][<info>]
+%
+% Skill and tag commands:
+%
+% \skill{<name>}{<score>}
+% \simpleskill[<icon>]{<name>}
+% \boxedtag[<icon>]{<name>}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\makeheader
+
+\begin{mainpane}
+    \begin{mainsection}{Education}
+        \entryJob
+            {Bachelor's Degree in Computer Science / Applied Informatics}
+            [Studying programming, data analysis, algorithms, databases, linear algebra and software development]
+            {HSE University}
+            {2024 -- present}
+    \end{mainsection}
+
+    \begin{mainsection}{Work experience}
+        \entryJob
+            {Data Analyst, Hiking Department}
+            [Analyzed product and sales data, prepared reports and supported data-driven decisions for the hiking product category]
+            {Decathlon, Moscow}
+            {November 2023 -- March 2024}
+
+        \entryJob
+            {Student Developer / Data Analysis Projects}
+            [Solved academic and practical programming tasks in Python, C++, SQL and machine learning]
+            {HSE University}
+            {2024 -- present}
+    \end{mainsection}
+
+    \begin{mainsection}{Projects}
+        \entryGeneric
+            {LaTeX Resume Automation}
+            [Created a LaTeX resume and configured reproducible PDF build using Docker]
+            [\infoGithub
+                {github.com/geftertimur}
+                [https://github.com/geftertimur]]
+
+        \entryGeneric
+            {Data Analysis Projects}
+            [Analyzed datasets using Python, pandas, NumPy and scikit-learn; worked with regression, classification and model evaluation]
+
+        \entryGeneric
+            {Text Classification Project}
+            [Built machine learning models for text classification using bag-of-words, TF-IDF, Word2Vec and Logistic Regression]
+
+        \entryGeneric
+            {Computer Vision and Robotics Practice}
+            [Worked with OpenCV, PyTorch, Open3D, ROS2, Docker and Linux-based development environments]
+    \end{mainsection}
+
+    \begin{mainsection}{Skills \& languages}
+        \entrySkills[Programming]{
+            \skill{Python}{3}
+            \skill{C++}{2}
+            \skill{SQL}{2}
+            \skill{LaTeX}{2}
+        }
+
+        \entrySkills[Python stack]{
+            \simpleskill{OOP}
+            \simpleskill{Async programming}
+            \simpleskill{NumPy}
+            \simpleskill{OpenCV}
+            \simpleskill{PyTorch}
+            \simpleskill{Open3D}
+            \simpleskill{pandas}
+            \simpleskill{scikit-learn}
+        }
+
+        \entrySkills[C++ and CS]{
+            \simpleskill{Object-oriented programming}
+            \simpleskill{Data structures}
+            \simpleskill{Basic algorithms}
+            \simpleskill{Linear algebra}
+        }
+
+        \entrySkills[Tools]{
+            \simpleskill{Git}
+            \simpleskill{Docker}
+            \simpleskill{Linux}
+            \simpleskill{Networking utilities}
+            \simpleskill{GitHub Actions}
+            \simpleskill{Overleaf}
+        }
+
+        \entrySkills[Languages]{
+            \skill{Russian}{3}
+            \skill{English}{3}
+            \skill{French}{1}
+        }
+    \end{mainsection}
+
+    \begin{mainsection}{Personal interests}
+        \entryTags{
+            \boxedtag{Deep learning}
+            \boxedtag{Computer vision}
+            \boxedtag{Robotics}
+            \boxedtag{Trekking}
+            \boxedtag{Mathematics}
+            \boxedtag{Climbing}
+        }
+    \end{mainsection}
+\end{mainpane}
+
+\end{document}
+```
+
