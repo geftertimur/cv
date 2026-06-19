@@ -28,8 +28,8 @@ jobs:
 
       - name: Prepare Pages directory
         run: |
-          mkdir -p public/cv
-          cp resume.pdf public/cv/resume.pdf
+          mkdir -p public
+          cp resume.pdf public/resume.pdf
 
       - name: Publish to gh-pages
         if: github.ref == 'refs/heads/main'
