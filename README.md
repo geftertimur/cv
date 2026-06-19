@@ -1,10 +1,10 @@
-#Resume
+# Resume
 
 ФИО: Гефтер Тимур  
 
 Группа: БКНАД253
 
-##how-to-build
+## how-to-build
 
 ```bash
 
