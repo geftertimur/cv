@@ -30,5 +30,5 @@ The generated pdf will be available as `resume.pdf`.
 
 
 
-Resume link: https://geftertimur.github.io/cv/resume.pdf
+Resume link: https://geftertimur.github.io/cv/cv/resume.pdf
 
