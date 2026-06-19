@@ -1,8 +1,13 @@
-name: Build resume
+name: Build and publish resume
 
 on:
   push:
+    branches:
+      - main
   pull_request:
+
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -20,3 +25,15 @@ jobs:
 
       - name: Check PDF exists
         run: test -f resume.pdf
+
+      - name: Prepare Pages directory
+        run: |
+          mkdir -p public/cv
+          cp resume.pdf public/cv/resume.pdf
+
+      - name: Publish to gh-pages
+        if: github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
